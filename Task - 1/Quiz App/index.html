@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="start-screen" class="screen">
+        <h1>Welcome to the Quiz App</h1>
+        <label>Choose Category:</label>
+        <select id="category">
+            <option value="webdev">Web Development</option>
+            <option value="math">Math</option>
+            <option value="gk">General Knowledge</option>
+        </select>
+
+        <label>Choose Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <br>
+
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" class="screen hidden">
+        <div id="progress">
+            <div id="progress-bar"></div>
+        </div>
+        <h2 id="question-text"></h2>
+        <div id="options-container"></div>
+        <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+    </div>
+
+    <div id="result-screen" class="screen hidden">
+        <h2>Quiz Completed!</h2>
+        <p id="score-text"></p>
+        <p id="feedback" class="feedback"></p>
+        <button id="view-answers">View Answers</button>
+        <div id="answers-summary" class="answers hidden"></div>
+        <button onclick="location.reload()">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

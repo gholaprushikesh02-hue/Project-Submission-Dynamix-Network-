@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Learning Management System - Dashboard</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Learning Management System Dashboard</h1>
+        <nav>
+             <span id="dash-user"></span>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="courses.html">Courses</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="profile.html">Profile</a>
+            <!-- <a id="logout-btn" href="#">Logout</a> -->
+            <button id="logout-btn">Logout</button>
+        </nav>
+       
+    </header>
+
+
+    <main class="container">
+        <section id="student-view" class="card hidden">
+            <h2>Your Courses</h2>
+            <div id="enrolled-list"></div>
+            <h3>Available Courses</h3>
+            <div id="available-list"></div>
+            <h3>Your Progress</h3>
+            <div id="progress-list"></div>
+        </section>
+
+
+        <section id="teacher-view" class="card hidden">
+            <h2>Manage Courses</h2>
+            <div class="form-row">
+                <input id="course-title" placeholder="Course Title" />
+                <input id="course-desc" placeholder="Short Description" />
+                <button id="add-course">Add Course</button>
+            </div>
+            <h3>All Courses</h3>
+            <div id="manage-courses"></div>
+        </section>
+    </main>
+
+
+    <script src="./JS/dashboard.js"></script>
+</body>
+
+</html>

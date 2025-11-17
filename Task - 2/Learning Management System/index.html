@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LMS - Login</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div id="login-box" class="box">
+            <h2>Login</h2>
+            <!-- <input id="login-email" placeholder="Enter Email" />
+            <input id="login-pass" type="password" placeholder="Enter Password" /> -->
+
+            <label>Email</label>
+            <input type="email" id="login-email" placeholder="Enter email">
+
+            <label>Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="login-pass" placeholder="Enter password">
+                <span id="togglePassword" class="eye">👁️</span>
+            </div>
+            <select id="login-role" style="display:none;"></select>
+            <button id="login-btn">Login</button>
+            <p>New? <a onclick="showRegister()" class="reg-a">Register here</a></p>
+        </div>
+
+
+        <div id="register-box" class="box hidden">
+            <h2>Register</h2>
+            <input id="reg-name" placeholder="Full Name" />
+            <input id="reg-email" placeholder="Email" />
+            <!-- <div class="password-wrapper"> -->
+            <input id="reg-pass" type="password" placeholder="Password" />
+            <!-- <span id="togglePassword" class="eye">👁️</span>
+            </div> -->
+            <label>Role:</label>
+            <select id="reg-role">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+            <button id="reg-btn">Register</button>
+            <p>Already registered? <a onclick="showLogin()" class="reg-a">Login</a></p>
+        </div>
+    </div>
+
+
+    <script src="./JS/auth.js"></script>
+</body>
+
+</html>
